@@ -1,6 +1,7 @@
 import cv2
 import glob
 import os
+import sys
 
 def txt_number_of_lines(path):
     with open(path) as f:
@@ -63,9 +64,8 @@ def a():
         make_path(out_path)
         particular_elegans_cut(elegans_id, out_path)
 
-in_path = ("../../image/1-1_img")
+args = sys.argv
+in_path = args[1]
 txt_paths = sorted(glob.glob(in_path + "/*.txt"))
-elegans_number = 0
-count = 0
 classes_number = txt_number_of_lines(in_path + "/classes.txt")
 a()
