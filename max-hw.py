@@ -22,9 +22,9 @@ def dir_max(dir_path):
     return max
 
 def dirs_max(dir_paths):
+    max = 0
     for dir_path in dir_paths:
         tmp = dir_max(dir_path)
-        max = 0
 
         if max < tmp:
             max = tmp
