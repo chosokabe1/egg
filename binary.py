@@ -57,7 +57,7 @@ cv2.imwrite("./e.jpg", closing1_opening1)
 cv2.imwrite("./f.jpg", closing3)
 
 square = make_square(closing1_opening1_closing2,max_hw)
-square = cv2.resize(square, dsize=(IMG_SIZE,IMG_SIZE))
+# square = cv2.resize(square, dsize=(IMG_SIZE,IMG_SIZE))
 cv2.imwrite("./d.jpg", square)
 
 npsquare = np.array(Image.open('./d.jpg'))
